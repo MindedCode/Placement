@@ -60,8 +60,8 @@ public class Main
 	
 }
 
-
-**/Output of the program /**
+****/create simple main function program of Linked list/****
+****/ Output of the program /****
 Enter the any check year like -> 400, 2036, 1900, 2024, 2028, 2032
 1900
 the year is not a leap year
