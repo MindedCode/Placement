@@ -25,6 +25,8 @@ public class Main
 	    Function calls
 	        */
 	        reverseWhile(number,reverse);
+	        reverseForLoop(number,reverse);
+	        reverseRecursionI(number,reverse);
 	}
 	
 	// 1. Using while loop
@@ -39,12 +41,72 @@ public class Main
 	    }
 	    System.out.println("After reverse number " + r);
 	}
+	
+	
+	// 2. Help of For loop
+	
+	static void reverseForLoop(int n,int r){
+	    
+	   // for(int i=n; i!=0; i/=10){
+	   //     r = r * 10 + i%10;
+	   // }
+	   
+	   for( ;n != 0; n/=10)
+        {
+            r = r * 10 + n % 10;
+        }
+	    System.out.println("\nAfter reverse number help of for loop  : " + r);
+	}
+	
+	
+	// 3. Help of Recursion I
+	
+	static int reverseRecursionI(int n,int r){
+	    
+	    if(n==0){
+	        return r;
+	    }
+	    System.out.println( "1....."+r);
+	    r = r * 10 + n%10;
+	    n/=10;
+	    System.out.println( "\n2....."+r);
+	    
+	    return reverseRecursionI(n, r);
+	    
+	}
 }
+
 
 
 
 
 ****/Output of the Program : /****
 Enter the any number choice reverse :
-894
-After reverse number 498
+12345464 
+After reverse number 46454321
+
+After reverse number help of for loop  : 46454321
+1.....0
+
+2.....4
+1.....4
+
+2.....46
+1.....46
+
+2.....464
+1.....464
+
+2.....4645
+1.....4645
+
+2.....46454
+1.....46454
+
+2.....464543
+1.....464543
+
+2.....4645432
+1.....4645432
+
+2.....46454321
