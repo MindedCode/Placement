@@ -93,12 +93,12 @@ public class Main
 
 
 
-*****//Output of the pro
+*****//*****Output of the pro
 Yes 145 Strong Number
 145 is Strong Number 
 DP result : 145
 DP result : 145
 Yes
-//****
+****//****
 
 
