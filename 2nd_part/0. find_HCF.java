@@ -46,7 +46,7 @@ public class Main
                 hcf = i;
             }
         }
-        System.out.println("The HCF is : " + hcf);
+        System.out.println("Highest common factor of " + n1 + " and " + n2 + " is => " + hcf);
     }
     
 	public static void main(String[] args) {
