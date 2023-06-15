@@ -38,8 +38,26 @@ public class Main
             else
             n2 -=n1;
         }
+	    
         System.out.println("The HCF is : " + n1);
     }
+	
+// 	class Main {
+//     public static void main(String[] args) {
+//         int num1 = 0, num2 = 60, hcf;
+
+//         while (num1 != 0 && num2 != 0) {
+//             if (num1 > num2)
+//                 num1 -= num2;
+//             else
+//                 num2 -= num1;
+//         }
+
+//         hcf = (num1 != 0) ? num1 : num2;
+
+//         System.out.println("The HCF: " + hcf);
+//     }
+// }
     static void hcf(int n1, int n2, int hcf){
         for(int i=1; i<=n1||i<=n2; i++){
             if(n1%i == 0 && n2 % i == 0){
