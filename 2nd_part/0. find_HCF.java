@@ -44,16 +44,16 @@ public class Main
 	
 // 	class Main {
 //     public static void main(String[] args) {
-//         int num1 = 0, num2 = 60, hcf;
+//         int n1 = 0, n2 = 60, hcf;
 
-//         while (num1 != 0 && num2 != 0) {
-//             if (num1 > num2)
-//                 num1 -= num2;
+//         while (n1 != 0 && n2 != 0) {
+//             if (n1 > n2)
+//                 n1 -= n2;
 //             else
-//                 num2 -= num1;
+//                 n2 -= n1;
 //         }
 
-//         hcf = (num1 != 0) ? num1 : num2;
+//         hcf = (n1 != 0) ? n1 : n2;
 
 //         System.out.println("The HCF: " + hcf);
 //     }
@@ -69,13 +69,13 @@ public class Main
     
 	public static void main(String[] args) {
 		
-		int num1 = 46, num2 = 600, hcf = 0;
+		int n1 = 46, n2 = 600, hcf = 0;
 		
-		hcf(num1, num2, hcf);
-		repeated_substruction(num1, num2);
-		hcf  = rep_subs_Recursion(num1, num2);
+		hcf(n1, n2, hcf);
+		repeated_substruction(n1, n2);
+		hcf  = rep_subs_Recursion(n1, n2);
 		System.out.println(hcf);
-		hcf = getHcf(num1, num2);
+		hcf = getHcf(n1, n2);
 		System.out.println(hcf);
 		
 	}
@@ -84,6 +84,44 @@ public class Main
 
 
 The HCF is : 2
+
+
+
+// Third Method==============================================================================
+
+	class Main
+{
+  public static void main (String[]args)
+  {
+    int n1 = 36, n2 = 60, hcf;
+
+      hcf = getHCF (n1, n2);
+      System.out.println ("The HCF: " + hcf);
+  }
+
+  static int getHCF (int n1, int n2)
+  {
+    // Handles the case when one of the number is 0 (n1) 
+    // Check alert above in explanation
+    if (n1 == 0)
+      return n2;
+
+    // Handles the case when one of the number is 0 (n2)
+    // Check alert above in explanation
+    if (n2 == 0)
+      return n1;
+
+    // base case
+    if (n1 == n2)
+      return n1;
+
+    // n1 is greater
+    if (n1 > n2)
+      return getHCF (n1 - n2, n2);
+
+    return getHCF (n1, n2 - n1);
+  }
+}
 The HCF is : 2
 2
 2
