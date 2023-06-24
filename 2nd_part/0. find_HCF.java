@@ -39,7 +39,7 @@ public class Main
             n2 -=n1;
         }
 	    
-        System.out.println("The HCF is : " + n1);
+        System.out.println("The HCF is : " + n1); 		// n1 ya n2 
     }
 	
 // 	class Main {
