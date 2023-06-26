@@ -125,4 +125,33 @@ The HCF is : 2
 The HCF is : 2
 2
 2
+
+--------------------------------------------------------------------------------
+
+	class Main
+{
+    public static void main (String[]args)
+    {
+        int num1 = 36, num2 = 60, hcf;
+
+            hcf = getHCF (num1, num2);
+            System.out.println ("The HCF: " + hcf);
+    }
+
+// This method improves complexity of repeated substraction
+// By efficient use of modulo operator in euclidean algorithm
+    static int getHCF (int a, int b)
+    {
+        return b == 0 ? a : getHCF (b, a % b);
+    }
+
+
+
+	// Output of solution::
+	               //  // getHCF(60, 36%60)   //36
+                // getHCF(36, 60%36)   //24
+                // getHCF(24, 36%24)   //12
+                // getHCF(12, 24%12)   //0  
+	
+	// condition is true  return a  => a = 12
   
