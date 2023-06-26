@@ -154,4 +154,38 @@ The HCF is : 2
                 // getHCF(12, 24%12)   //0  
 	
 	// condition is true  return a  => a = 12
+
+
+
+	--------------------------------------------------------------------------
+
+
+	class Main
+{
+    public static void main (String[]args)
+    {
+        int num1 = -36, num2 = 60, hcf = 1;
+
+        // if user enters negative number, we just changing it to positive
+        // By definition HCF is highest positive number that divides both numbers
+        // -144 & 32 : HCF = 16 (as highest num that divides both)
+        // -144 & - 32 : HCF = 16 (as highest num that divides both)
+            num1 = (num1 > 0) ? num1 : -num1;
+            num2 = (num2 > 0) ? num2 : -num2;
+
+            hcf = getHCF (num1, num2);
+            System.out.println ("The HCF: " + hcf);
+}
+
+// This method improves complexity of repeated substraction
+// By efficient use of modulo operator in euclidean algorithm
+    static int getHCF (int a, int b)
+    {
+        return b == 0 ? a : getHCF (b, a % b);
+    }
+}
+
+
+
+
   
