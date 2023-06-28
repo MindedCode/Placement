@@ -59,29 +59,28 @@ public class Main
 
 //Java program to convert Hexa Decimal number to decimal number
 
-public class Main
+class Main
 {
-    static void hexa1(int hexa){
-        //Declare variable to store decimal number  
-        int HexaDecimal = 0;
-		//Declare variable to use in power		
-		int p = 0;  
-		//writing logic for the conversion
-		while(hexa > 0)
-		{
-			int temp = hexa % 10;  
-			HexaDecimal += temp * Math.pow(16, p);  
-			hexa = hexa/10;  
-			p++;  
-		}
-		//printing result
-		System.out.println("Hexa Decimal number : "+HexaDecimal);
-    }
-	public static void main(String args[])
-	{      
-		int hexaNum = 99;
-		hexa1(hexaNum);
-	}
+  public static void main (String[]args)
+  {
+
+    String hex = "A9";
+    System.out.println (convert (hex));
+  }
+  
+  static int convert(String hex){  
+    String digits = "0123456789ABCDEF";  
+             hex = hex.toUpperCase();  
+             int val = 0;  
+             for (int i = 0; i < hex.length(); i++)  
+             {  
+                 char c = hex.charAt(i);  
+                 int d = digits.indexOf(c);  
+                 val = 16*val + d;  
+             }  
+             return val;  
+  }  
+
 }
 
 // Output of the Program:
