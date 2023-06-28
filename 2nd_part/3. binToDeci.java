@@ -47,13 +47,13 @@ public class Main
     }
 	public static void main(String args[])
 	{      
-		int octal = 110;
+		int octal = 37;
 		octal1(octal);
 	}
 }
 
 // Output of the Program:
-// 72
+// 31
 
 
 
@@ -61,28 +61,28 @@ public class Main
 
 public class Main
 {
-    static void octal1(int octal){
+    static void hexa1(int hexa){
         //Declare variable to store decimal number  
-        int decimal = 0;
+        int HexaDecimal = 0;
 		//Declare variable to use in power		
 		int p = 0;  
 		//writing logic for the conversion
-		while(octal > 0)
+		while(hexa > 0)
 		{
-			int temp = octal % 10;  
-			decimal += temp * Math.pow(16, p);  
-			octal = octal/10;  
+			int temp = hexa % 10;  
+			HexaDecimal += temp * Math.pow(16, p);  
+			hexa = hexa/10;  
 			p++;  
 		}
 		//printing result
-		System.out.println("Decimal number : "+decimal);
+		System.out.println("Hexa Decimal number : "+HexaDecimal);
     }
 	public static void main(String args[])
 	{      
-		int octal = 111;
-		octal1(octal);
+		int hexaNum = 99;
+		hexa1(hexaNum);
 	}
 }
 
 // Output of the Program:
-// 273
+// 153
