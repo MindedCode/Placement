@@ -1,26 +1,27 @@
-//Java program to convert Binary number to decimal number
-import java.util.Scanner;
+//Java program to convert Binary number to decimal number=-----------------------------------
 public class Main
 {
 	public static void main(String args[])
 	{
-		Scanner sc = new Scanner(System.in);    
-		System.out.print("Enter a binary number : ");
-		int binary = sc.nextInt();
+		int binary = 10111
 		//Declaring variable to store decimal number  
 		int decimal = 0;
 		//Declaring variable to use in power		
-		int n = 0;  
+		int p = 0;  
 		//writing logic for the conversion
 		while(binary > 0)
 		{
-			int temp = binary%10; 
-			decimal += temp*Math.pow(2, n);  
+			int t = binary%10; 
+			decimal += t*Math.pow(2, p);  
 			binary = binary/10;  
-			n++;  
+			p++;  
 		}
 		System.out.println("Decimal number : "+decimal); 
                 //closing scanner class(not compulsory, but good practice)
 		sc.close();
 	}
 }
+
+
+// Output of the Program:
+// 23
