@@ -98,5 +98,46 @@ Output :
 
 
 
+// JAVA program to convert decimal-------------------------------------------------------------------------
+import java.io.*;
+public class Main {
+
+    // function to calculate the octal value of the given
+    // decimal number
+    static void octaltodecimal(int deciNum)
+    {
+
+        int octalNum = 0, countval = 1;
+        int dNo = deciNum;
+
+        while (deciNum != 0) {
+
+            // decimals remainder is calculated
+            int remainder = deciNum % 8;
+
+            // storing the octalvalue
+            octalNum += remainder * countval;
+
+            // storing exponential value
+            countval = countval * 10;
+            deciNum /= 8;
+        }
+        System.out.println(octalNum);
+    }
+
+    // Driver Code
+    public static void main(String[] args)
+    {
+
+        int n = 33;
+
+        // Function Call
+        octaltodecimal(n);
+    }
+}
+
+
+
+
 
 
