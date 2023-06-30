@@ -35,4 +35,5 @@ class Main
 
 // Output of the Program:
 
+// Declare string type result 
 // 011100111 
