@@ -1,4 +1,7 @@
 /* Write a program to find roots of a quadratic equation in Java*/
+
+//  this topic is learn ensure already known the type casting
+
 import java.io.*;
 import static java.lang.Math.*;
 class Main{
