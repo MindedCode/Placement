@@ -15,3 +15,27 @@ public class Main {
         System.out.println("Largest in given array is " + largest());
     }
 }
+
+
+//Largest Element of the array using Recursion in Java
+public class Main {
+     public static int findMinimum(int A[], int n)
+    {
+      // if size = 0 means whole array has been traversed
+      if(n == 1)
+        return A[0];
+         
+        return Math.min(A[n-1], findMinimum(A, n-1));
+    }
+     
+    public static void main(String args[])
+    {
+        int A[] = { 15, 60, -6, 0, 2};
+        int n = A.length;
+        System.out.println("Smallest element in the array is: "+findMinimum(A, n));
+    }
+}
+
+
+// Output is:
+//     Smallest element in the array is: -6
